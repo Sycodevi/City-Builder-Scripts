@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c2d30663d33cf0543957121a7e3865ed
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ResidentialPanel: {fileID: 919132149155446097, guid: 6ccc6899544e54f4bb8c66a065cbd9ed, type: 3}
+  - CommercialPanel: {instanceID: 0}
+  - ServicePanel: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

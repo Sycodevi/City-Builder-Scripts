@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1950902da4e2774c8c7cf7169cec688, type: 3}
+  m_Name: Commercial 2
+  m_EditorClassIdentifier: 
+  buildingName: Barber Shop
+  prefab: {fileID: 4039181910061966876, guid: 34170fcfe0a4e6c44bd98f9f11705a7d, type: 3}
+  placementCost: 0
+  upkeepCost: 0
+  income: 0
+  requireRoad: 0
+  requireWater: 0
+  requirePower: 0
+  prefabVariants: []
+  Upgradable: 0
+  availableUpgrades: []
+  zoneType: 1
