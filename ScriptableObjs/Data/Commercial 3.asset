@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Commercial 3
   m_EditorClassIdentifier: 
   buildingName: Clothing Shop
-  prefab: {fileID: 8542657805388056294, guid: 24279287f04a7b347b028d39f4916a1e, type: 3}
-  placementCost: 0
+  prefab: {fileID: 784415914492559338, guid: 7c9e2da735795d344ac0cf74723fe6f5, type: 3}
+  placementCost: 7500
   upkeepCost: 0
-  income: 0
-  requireRoad: 0
-  requireWater: 0
-  requirePower: 0
+  income: 150
+  requireRoad: 1
+  requireWater: 1
+  requirePower: 1
+  structureRange: 1
+  structureCount: 0
+  zoneStructureObj: {fileID: 0}
   prefabVariants: []
   Upgradable: 0
   availableUpgrades: []
   zoneType: 1
+  maxFacilitySearchRange: 15

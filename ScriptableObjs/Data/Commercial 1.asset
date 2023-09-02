@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Commercial 1
   m_EditorClassIdentifier: 
   buildingName: Market
-  prefab: {fileID: 2807304145295793188, guid: 6f92e4596ee92574a9575d394a0a9b4a, type: 3}
-  placementCost: 0
+  prefab: {fileID: 8438491983959895401, guid: e792bc4ee29e0634c991a036a2e0129e, type: 3}
+  placementCost: 5000
   upkeepCost: 0
-  income: 0
-  requireRoad: 0
-  requireWater: 0
-  requirePower: 0
+  income: 100
+  requireRoad: 1
+  requireWater: 1
+  requirePower: 1
+  structureRange: 1
+  structureCount: 0
+  zoneStructureObj: {fileID: 0}
   prefabVariants: []
   Upgradable: 0
   availableUpgrades: []
   zoneType: 1
+  maxFacilitySearchRange: 15

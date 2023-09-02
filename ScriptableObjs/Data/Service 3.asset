@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Service 3
   m_EditorClassIdentifier: 
   buildingName: Sports Complex
-  prefab: {fileID: 4920353365905490031, guid: 533b60a51af1c474ab69b6a16b3f53c2, type: 3}
-  placementCost: 0
-  upkeepCost: 0
+  prefab: {fileID: 7149670900319708388, guid: 306c9c9d30e981447b03854c58a83aab, type: 3}
+  placementCost: 20000
+  upkeepCost: 100
   income: 0
-  requireRoad: 0
+  requireRoad: 1
   requireWater: 0
   requirePower: 0
+  structureRange: 1
+  structureCount: 0
+  zoneStructureObj: {fileID: 0}
   prefabVariants: []
   Upgradable: 0
   availableUpgrades: []
   zoneType: 3
+  maxFacilitySearchRange: 15

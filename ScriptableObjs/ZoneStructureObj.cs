@@ -9,6 +9,7 @@ public class ZoneStructureObj : StructureBase
     public bool Upgradable;
     public UpgradeType[] availableUpgrades;
     public ZoneType zoneType;
+    public int maxFacilitySearchRange;
 }
 
 [System.Serializable]
@@ -25,5 +26,6 @@ public enum ZoneType
     Residential,
     Commercial,
     Industrial,
-    Service
+    Service,
+    None
 }

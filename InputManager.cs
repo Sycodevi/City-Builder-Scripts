@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour, IInputManager
 {
+    UIController uiController;
+
     private Action<Vector3> OnPointerSecondChangeHandler;
     private Action<Vector3> OnPointerDownHandler;
     private Action OnPointerSecondUpHandler;
@@ -36,7 +38,7 @@ public class InputManager : MonoBehaviour, IInputManager
             CallActionOnPointer((position) => OnPointerDownHandler?.Invoke(position));
 
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             /*Vector3? position = GetMousePosition();
             if (position.HasValue)
@@ -46,7 +48,7 @@ public class InputManager : MonoBehaviour, IInputManager
             }*/
             CallActionOnPointer((position) => OnPointerChangeHandler?.Invoke(position));
         }
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             OnPointerUpHandler?.Invoke();
         }

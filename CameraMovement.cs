@@ -6,6 +6,7 @@ public class CameraMovement : MonoBehaviour
 {
     Vector3? basePointerPosition = null;
     public float CameraSpeed = 0.03f;
+    public float CameraRotateSpeed = 1.0f;
     private int CameraXmin, CameraZmin, CameraXmax, CameraZmax;
 
     // Start is called before the first frame update

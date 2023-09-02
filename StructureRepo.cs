@@ -113,6 +113,26 @@ public class StructureRepo : MonoBehaviour
         }
         return null;
     }
+
+    internal StructureBase GetStructureData(string structureName, StructureType structureType)
+    {
+        switch (structureType)
+        {
+            case StructureType.Residential:
+                return modelData.ResidentialZoneList.Where(structure => structure.buildingName == structureName).FirstOrDefault();
+            case StructureType.Commercial:
+                return modelData.CommercialZoneList.Where(structure => structure.buildingName == structureName).FirstOrDefault();
+            case StructureType.Service:
+                return modelData.ServiceZoneList.Where(structure => structure.buildingName == structureName).FirstOrDefault(); 
+            case StructureType.SingleStructure:
+                return modelData.singleStructureList.Where(structure => structure.buildingName == structureName).FirstOrDefault();
+            case StructureType.Road:
+                return modelData.roadStructure;
+            case StructureType.None:
+                return null;
+        }
+        return null;
+    }
 }
 
 public enum StructureType
@@ -121,5 +141,6 @@ public enum StructureType
     Commercial,
     Service,
     SingleStructure,
-    Road
+    Road,
+    None
 }

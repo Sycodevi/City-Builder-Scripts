@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class SingleStructureObj : StructureBase
 {
-    public int range;
+    public int singleStructureRange;
 }

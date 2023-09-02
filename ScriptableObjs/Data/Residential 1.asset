@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Residential 1
   m_EditorClassIdentifier: 
   buildingName: Lower-Class
-  prefab: {fileID: 5488331987093852178, guid: 1cf2e2db48e91be479c86b5aa65ef2d2, type: 3}
-  placementCost: 0
+  prefab: {fileID: 1067219128994337368, guid: 99c8360cfacd2174c89194ce8c8c1700, type: 3}
+  placementCost: 2500
   upkeepCost: 0
-  income: 0
-  requireRoad: 0
-  requireWater: 0
-  requirePower: 0
+  income: 50
+  requireRoad: 1
+  requireWater: 1
+  requirePower: 1
+  structureRange: 1
+  structureCount: 0
+  zoneStructureObj: {fileID: 0}
   prefabVariants: []
   Upgradable: 0
   availableUpgrades: []
   zoneType: 0
+  maxFacilitySearchRange: 15

@@ -13,13 +13,17 @@ MonoBehaviour:
   m_Name: Road
   m_EditorClassIdentifier: 
   buildingName: Road
-  prefab: {fileID: 1785553593880685709, guid: 07188a2cbe27fc04e9d42f7105d71c99, type: 3}
-  placementCost: 0
-  upkeepCost: 0
+  prefab: {fileID: 9142467943181765776, guid: ef6a242cae7ee7d40b04f9ee4a2b6ccf, type: 3}
+  placementCost: 150
+  upkeepCost: 50
   income: 0
   requireRoad: 0
   requireWater: 0
   requirePower: 0
-  cornerPrefab: {fileID: 4457089474418493722, guid: 5a753f8c561341b47b5d33ec08ad5f90, type: 3}
-  threewayPrefab: {fileID: 627305350859123433, guid: f7d72b1706486c741a0b6b4035356261, type: 3}
-  fourwayPrefab: {fileID: 5025471607026286888, guid: cc8a31d69518753428e570a20948e4ab, type: 3}
+  structureRange: 2
+  structureCount: 0
+  zoneStructureObj: {fileID: 0}
+  cornerPrefab: {fileID: 608577018022352272, guid: 3e3fa54fcd92e8042944a0f938cdcb38, type: 3}
+  threewayPrefab: {fileID: 8679056266309810206, guid: 09b82aac5d408664fbf88996719e8e16, type: 3}
+  fourwayPrefab: {fileID: 7986646251438922711, guid: cf8d754d5a91dbe4c8065093675521e0, type: 3}
+  prefabRotationValue: 0

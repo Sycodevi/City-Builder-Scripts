@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Commercial 5
   m_EditorClassIdentifier: 
   buildingName: Office Small
-  prefab: {fileID: 1048114136117317518, guid: 975586cb854f68c4d87597128f31a2fc, type: 3}
-  placementCost: 0
-  upkeepCost: 0
-  income: 0
-  requireRoad: 0
-  requireWater: 0
-  requirePower: 0
+  prefab: {fileID: 7067166520894708256, guid: 1c1227f4cc57e4a42878d69fca9a41cc, type: 3}
+  placementCost: 12000
+  upkeepCost: 25
+  income: 250
+  requireRoad: 1
+  requireWater: 1
+  requirePower: 1
+  structureRange: 1
+  structureCount: 0
+  zoneStructureObj: {fileID: 0}
   prefabVariants: []
   Upgradable: 0
   availableUpgrades: []
   zoneType: 1
+  maxFacilitySearchRange: 15

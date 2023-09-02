@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Residential 4
   m_EditorClassIdentifier: 
   buildingName: Upper-Class R
-  prefab: {fileID: 4902999357587417646, guid: 4e4fa642dff809844b73c2e4af0aac31, type: 3}
-  placementCost: 0
+  prefab: {fileID: 7960770887794497184, guid: 1f2b0ba5be1176645a6cd80bc0ccc909, type: 3}
+  placementCost: 10000
   upkeepCost: 0
-  income: 0
-  requireRoad: 0
-  requireWater: 0
-  requirePower: 0
+  income: 125
+  requireRoad: 1
+  requireWater: 1
+  requirePower: 1
+  structureRange: 1
+  structureCount: 0
+  zoneStructureObj: {fileID: 0}
   prefabVariants: []
   Upgradable: 0
   availableUpgrades: []
   zoneType: 0
+  maxFacilitySearchRange: 15

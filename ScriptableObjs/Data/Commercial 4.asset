@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Commercial 4
   m_EditorClassIdentifier: 
   buildingName: Furniture Shop
-  prefab: {fileID: 3270568426457153739, guid: fc7c19a1266400841acd44b38bb8a2e6, type: 3}
-  placementCost: 0
+  prefab: {fileID: 4168486765085765657, guid: 79b52f25754ae7d4ebb9f7cc8cb700a7, type: 3}
+  placementCost: 7500
   upkeepCost: 0
-  income: 0
-  requireRoad: 0
-  requireWater: 0
-  requirePower: 0
+  income: 150
+  requireRoad: 1
+  requireWater: 1
+  requirePower: 1
+  structureRange: 1
+  structureCount: 0
+  zoneStructureObj: {fileID: 0}
   prefabVariants: []
   Upgradable: 0
   availableUpgrades: []
   zoneType: 1
+  maxFacilitySearchRange: 15

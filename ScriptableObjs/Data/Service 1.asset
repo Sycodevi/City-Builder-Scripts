@@ -14,13 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Fire Dept.
   prefab: {fileID: 2353646956680401753, guid: 5cad5dccaf78b234096043af15cef977, type: 3}
-  placementCost: 0
+  placementCost: 13000
   upkeepCost: 0
   income: 0
-  requireRoad: 0
-  requireWater: 0
-  requirePower: 0
+  requireRoad: 1
+  requireWater: 1
+  requirePower: 1
+  structureRange: 1
+  structureCount: 0
+  zoneStructureObj: {fileID: 0}
   prefabVariants: []
   Upgradable: 0
   availableUpgrades: []
   zoneType: 3
+  maxFacilitySearchRange: 15

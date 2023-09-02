@@ -4,10 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.UIElements;
+using System.Resources;
 
 public class GameManager : MonoBehaviour
 {
-    public PlacementManager placementManager;
+    private IResourceManager resourceManager;
+    public GameObject resourceManagerGameObject;
+    public GameObject placementManagerGameObject;
+    private IPlacementManager placementManager;
     public StructureRepo structureRepo;
     public IInputManager inputManager;
     public int width, lenght;
@@ -26,12 +30,12 @@ public class GameManager : MonoBehaviour
     public PlayerBuildingRoadState buildingRoadState;
     public PlayerBuildingState buildingState;
 
-
+    public WorldManager worldManager;
     public PlayerState State { get => state; }
 
     private void Awake()
     {
-        StatePreparations();
+        
 
 #if (UNITY_EDITOR && TEST) || !(UNITY_IOS || UNITY_ANDROID)
         inputManager = gameObject.AddComponent<InputManager>();
@@ -43,8 +47,9 @@ public class GameManager : MonoBehaviour
 
     private void StatePreparations()
     {
-        buildingManager = new BuildingManager(cellSize, width, lenght, placementManager, structureRepo);
-        selectionState = new PlayerSelectionState(this, Cameraman);
+        buildingManager = new BuildingManager(worldManager.Grid, placementManager, structureRepo, resourceManager, uiController);
+        resourceManager.prepareRM(buildingManager);
+        selectionState = new PlayerSelectionState(this, buildingManager);
         demolishState = new PlayerRemoveBuildingState(this, buildingManager);
         buildingSingleStructureState = new PlayerBuildingSingleStructureState(this, buildingManager);
         buildingState = new PlayerBuildingState(this, buildingManager);
@@ -56,6 +61,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        placementManager = placementManagerGameObject.GetComponent<IPlacementManager>();
+        placementManager.PreparePlacementManager(worldManager);
+        resourceManager= resourceManagerGameObject.GetComponent<IResourceManager>();
+        worldManager.PrepareWorld(cellSize, width - 100, lenght - 100);
+        StatePreparations();
         inputManager.MouseInputMask = inputMask;
         Cameraman.SetCameraBounds(0, width, 0, lenght);
         //inputManager = FindObjectsOfType<MonoBehaviour>().OfType<IInputManager>().FirstOrDefault();
@@ -80,6 +90,7 @@ public class GameManager : MonoBehaviour
         inputManager.AddListenerOnPointerSecondChangeEvent((position)=>state.OnInputPanChange(position));
         inputManager.AddListenerOnPointerSecondUpEvent(()=>state.OnInputPanUp());
         inputManager.AddListenerOnPointerChangeEvent((position)=>state.OnInputPointerChange(position));
+        inputManager.AddListenerOnPointerUpEvent(()=>state.OnInputPointerUp());
     }
 
     //private void EnableDemolishMode()
